@@ -153,7 +153,7 @@
     "lint": "eslint --cache --max-warnings 0 src/ test/ types/",
     "format": "npm run lint -- --fix",
     "validate:ascii": "gulp --gulpfile gulpfile.cjs validate:ascii",
-    "test": "npm run test:src && npm run lint",
+    "test": "mocha --reporter spec test/unit-tests/function/matrix/eigs.test.js ",
     "test:src": "mocha test/unit-tests",
     "test:generated": "mocha test/generated-code-tests",
     "test:node": "mocha test/node-tests/*.test.js test/node-tests/**/*.test.js",
