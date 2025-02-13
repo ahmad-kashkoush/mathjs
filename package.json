@@ -90,7 +90,10 @@
     "build": "gulp",
     "watch": "gulp watch",
     "docs": "gulp docs",
-    "test": "mocha test --recursive",
+    "test": "npm run test:unit ; npm run test:createUnit ",
+    "test:createUnit": "mocha  test/type/unit/function/createUnit.test.js ",
+    "test:unit": " mocha test/type/unit/Unit.test.js --grep 'createUnitSingle|UNITS'",
+    "test:all": "mocha test --recursive",
     "coverage": "istanbul cover _mocha -- test --recursive; echo \"\nCoverage report is available at ./coverage/lcov-report/index.html\""
   },
   "bin": {
